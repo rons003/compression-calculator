@@ -19,7 +19,7 @@
           "options": {
             "outputPath": "dist/compression-calculator",
             "index": "src/index.html",
-            "browser": "",
+            "browser": "src/main.ts",
             "polyfills": [
               "zone.js"
             ],
