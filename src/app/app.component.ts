@@ -6,7 +6,7 @@ import { NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgbNavModule, FormsModule],
+  imports: [NgbNavModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
