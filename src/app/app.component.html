@@ -25,15 +25,39 @@
     <li [ngbNavItem]="2">
       <button ngbNavLink>Dynamic</button>
       <ng-template ngbNavContent>
-
+        <div class="mb-3">
+          <label class="form-label">Bore</label>
+          <input type="text" class="form-control" [(ngModel)]="bore">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Stroke</label>
+          <input type="text" class="form-control" [(ngModel)]="stroke">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Unswept Volume</label>
+          <input type="text" class="form-control" [(ngModel)]="uVolume">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Connecting Rod Length</label>
+          <input type="text" class="form-control" [(ngModel)]="rodLength">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Intake Valve Closing</label>
+          <input type="text" class="form-control" [(ngModel)]="intakeClosingAngle">
+        </div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary" (click)="calculate()">Calculate</button>
+        </div>
+        <pre>Compression Ratio: {{ getCompressionRatio() }}</pre>
       </ng-template>
     </li>
   </ul>
 
   <div [ngbNavOutlet]="nav" class="mt-2"></div>
-
+  <hr class="bg-danger border-1 border-top border-secondary" />
   <div class="px-4 py-3 my-3 text-center">
-    <img class="img-thumbnail d-block mx-auto mb-4" src="assets/avatar.png" alt="" width="200" height="120" style="border-radius: 50%;">
+    <img class="img-thumbnail d-block mx-auto mb-4" src="assets/avatar.png" alt="" width="200" height="120"
+      style="border-radius: 50%;">
     <h1 class="display-5 fw-bold">Best Ecu Tuner</h1>
     <div class="col-lg-6 mx-auto">
       <p class="lead mb-4">Enrich De Chavez</p>
