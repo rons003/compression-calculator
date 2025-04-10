@@ -20,8 +20,11 @@ export class AppComponent {
   uVolume: number = 0;
 
   calculate(){
-    const sVolume = this.bore * this.bore * this.stroke * 0.0007854;
-    this.cr = (sVolume + this.uVolume) / this.uVolume;
+    const bore = Number(this.bore);
+    const stroke = Number(this.stroke);
+    const uVolume = Number(this.uVolume);
+    const sVolume = bore * bore * stroke * 0.0007854;
+    this.cr = (sVolume + uVolume) / uVolume;
 
   }
 
