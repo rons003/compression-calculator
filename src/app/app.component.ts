@@ -26,7 +26,7 @@ export class AppComponent {
   }
 
   getCompressionRatio(): string {
-    const cr = Math.round(this.cr);
-    return cr.toString() + " : 1";
+    const cr = this.cr.toFixed(1);
+    return cr.toString() + ":1";
   }
 }
